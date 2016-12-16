@@ -13,9 +13,13 @@ public class CarSystem {
 	 public static void main(String[] args){
 		 System.out.println("欢迎使用clever租车系统");
 		 System.out.println("您是否要租车？1确认，2退出");
-		 Scanner c=new Scanner(System.in);
-		 int k=c.nextInt();
+		
+		 boolean flag=true;
+		 while(flag){
+			 Scanner c=new Scanner(System.in);
+			 int k=c.nextInt();
 		 if(k==1){
+			 flag=false;
 			 System.out.println("您可租车的类型及价目表");
 			 Car[] carForRent={new Bus(1,"奥迪A6",500,4),new Bus(2,"金龙客车",1000,40),new Truck(3,"丰田皮卡",600,2,4000),
 					 new Van(4,"解放货车",1000,10000)};
@@ -86,14 +90,23 @@ public class CarSystem {
 	             
 			 }
 		 }else if(k==2){
-	            System.out.println("感谢您的再次使用！再见！");
+			 flag=false;
+	          System.out.println("感谢您的再次使用！再见！");
 	             
-	        }else{
-	            System.out.println("您输入的信息有错！");
+	        }
+		 else{
+			 
+			 System.out.println("您输入的信息有错！请重新输入");
+	     
+	            
+	   		 	
+	   		 	
 	            }
 			 
 			 
 		 
 	 }
+	 }
 }
+
 
