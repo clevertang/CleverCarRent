@@ -1,6 +1,6 @@
 /*author=clevertang
  * email:961577196@qq.com
- * ¿ÎÌÃ×÷Òµ£¬ÃüÁîĞĞ¿ØÖÆµÄ×â³µÏµÍ³
+ * è¯¾å ‚ä½œä¸šï¼Œå‘½ä»¤è¡Œæ§åˆ¶çš„ç§Ÿè½¦ç³»ç»Ÿ
  */
 
 import java.util.*;
@@ -10,103 +10,101 @@ import java.util.List;
 
 import java.util.ArrayList;
 public class CarSystem {
-	 public static void main(String[] args){
-		 System.out.println("»¶Ó­Ê¹ÓÃclever×â³µÏµÍ³");
-		 System.out.println("ÄúÊÇ·ñÒª×â³µ£¿1È·ÈÏ£¬2ÍË³ö");
-		
-		 boolean flag=true;
-		 while(flag){
-			 Scanner c=new Scanner(System.in);
-			 int k=c.nextInt();
-		 if(k==1){
-			 flag=false;
-			 System.out.println("Äú¿É×â³µµÄÀàĞÍ¼°¼ÛÄ¿±í");
-			 Car[] carForRent={new Bus(1,"°ÂµÏA6",500,4),new Bus(2,"½ğÁú¿Í³µ",1000,40),new Truck(3,"·áÌïÆ¤¿¨",600,2,4000),
-					 new Van(4,"½â·Å»õ³µ",1000,10000)};
-			 System.out.println("ĞòºÅ"+"\t"+"³µÃû"+"\t"+"×â½ğ"+"\t"+"\t"+"ÈİÁ¿");
-			 //´òÓ¡Êä³ö³µÁ¾µÄÏêÏ¸ĞÅÏ¢
-			 for(int a=0;a<carForRent.length;a++){
-			//ÓÃinstanceofÀ´ÅĞ¶Ï×ó±ßµÄ¶ÔÏóÊÇ·ñÊÇÓÒ±ßÀàµÄÊµÀı£¬·µ»ØÒ»¸ö²¼¶ûÖµ
-				 System.out.println(1+"\t"+"°ÂµÏA6"+"\t"+500+"\t"+4);
-				 System.out.println(2+"\t"+"½ğÁú¿Í³µ"+"\t"+1000+"\t"+40);
-				 System.out.println(3+"\t"+"·áÌïÆ¤¿¨"+"\t"+600+"\t"+2+"\t"+4000);
-				 System.out.println(4+"\t"+"½â·Å»õ³µ"+"\t"+1000+"\t"+10000);
-				System.out.println("ÊäÈëÒª×â³µµÄÊıÁ¿"); 
-				int totalNum=c.nextInt();
-				//µ÷ÓÃ¼¯ºÏ¿ò¼ÜlistÓÃÓÚ´æ´¢¿Í»§×â³µµÄÇåµ¥
-				List<Car> carList=new ArrayList<Car>();
-				int p=0;//ÓÃÀ´À©Õ¹calListµÄÈİÁ¿
-				List<Car> carListBus=new ArrayList<Car>(); //ÓÃÀ´´¢´æ¿ÉÔØÈËµÄ³µÁ¾
-	            List<Car> carListTruck=new ArrayList<Car>();  //ÓÃÀ´´¢´æ¿ÉÔØ»õµÄ³µÁ¾
-	            int totalPassenger=0;; //ÓÃÀ´´æ´¢×ÜµÄÔØÈËÊı
-	            int totalCarrayCargo=0; //ÓÃÀ´´æ´¢×ÜµÄÔØ»õÁ¿
-	            int totalMoney=0; //ÓÃÀ´¼ÆËã×â³µµÄ×Ü×Ê½ğ
+	public static void main(String[] args){
+		System.out.println("æ¬¢è¿ä½¿ç”¨cleverç§Ÿè½¦ç³»ç»Ÿ");
+		System.out.println("æ‚¨æ˜¯å¦è¦ç§Ÿè½¦ï¼Ÿ1ç¡®è®¤ï¼Œ2é€€å‡º");
+
+		boolean flag=true;
+		while(flag){
+			Scanner c=new Scanner(System.in);
+			int k=c.nextInt();
+			if(k==1){
+				flag=false;
+				System.out.println("æ‚¨å¯ç§Ÿè½¦çš„ç±»å‹åŠä»·ç›®è¡¨");
+				Car[] carForRent={new Bus(1,"å¥¥è¿ªA6",500,4),new Bus(2,"é‡‘é¾™å®¢è½¦",1000,40),new Truck(3,"ä¸°ç”°çš®å¡",600,2,4000),
+						new Van(4,"è§£æ”¾è´§è½¦",1000,10000)};
+				System.out.println("åºå·"+"\t"+"è½¦å"+"\t"+"ç§Ÿé‡‘"+"\t"+"\t"+"å®¹é‡");
+				//æ‰“å°è¾“å‡ºè½¦è¾†çš„è¯¦ç»†ä¿¡æ¯
+				for(int a=0;a<carForRent.length;a++){
+					//ç”¨instanceofæ¥åˆ¤æ–­å·¦è¾¹çš„å¯¹è±¡æ˜¯å¦æ˜¯å³è¾¹ç±»çš„å®ä¾‹ï¼Œè¿”å›ä¸€ä¸ªå¸ƒå°”å€¼
+					System.out.println(1+"\t"+"å¥¥è¿ªA6"+"\t"+500+"\t"+4);
+					System.out.println(2+"\t"+"é‡‘é¾™å®¢è½¦"+"\t"+1000+"\t"+40);
+					System.out.println(3+"\t"+"ä¸°ç”°çš®å¡"+"\t"+600+"\t"+2+"\t"+4000);
+					System.out.println(4+"\t"+"è§£æ”¾è´§è½¦"+"\t"+1000+"\t"+10000);
+					System.out.println("è¾“å…¥è¦ç§Ÿè½¦çš„æ•°é‡");
+					int totalNum=c.nextInt();
+					//è°ƒç”¨é›†åˆæ¡†æ¶listç”¨äºå­˜å‚¨å®¢æˆ·ç§Ÿè½¦çš„æ¸…å•
+					List<Car> carList=new ArrayList<Car>();
+					int p=0;//ç”¨æ¥æ‰©å±•calListçš„å®¹é‡
+					List<Car> carListBus=new ArrayList<Car>(); //ç”¨æ¥å‚¨å­˜å¯è½½äººçš„è½¦è¾†
+					List<Car> carListTruck=new ArrayList<Car>();  //ç”¨æ¥å‚¨å­˜å¯è½½è´§çš„è½¦è¾†
+					int totalPassenger=0;; //ç”¨æ¥å­˜å‚¨æ€»çš„è½½äººæ•°
+					int totalCarrayCargo=0; //ç”¨æ¥å­˜å‚¨æ€»çš„è½½è´§é‡
+					int totalMoney=0; //ç”¨æ¥è®¡ç®—ç§Ÿè½¦çš„æ€»èµ„é‡‘
 	            /*
-	             * Ö÷ÒªË¼Ïë£ºÓÃÑ­»·±éÀúÔÚÌí¼Ó¿Í»§×â³µµÄĞòºÅ£¬ÓÃ¼¯ºÏ¿ò¼ÜListÀ´´æ´¢¿Í»§×âµÄ³µÁ¾¡£
-	             * Í¬Ê±ÔÚ¿Í»§ÊäÈëĞòºÅµÄÊ±ºòÓëÈıÖÖ³µÁ¾½øĞĞ±È¶Ô£¬¼ÆËãÏàÓ¦³µÁ¾µÄÔØÈËÊı£¬ÔØ»õÁ¿ÒÔ¼°×â³µµÄ×Ü×Ê½ğ
-	             * Í¬Ê±Ìí¼Óµ½ÔØÈË³µÁ¾»òÕßÔØ»õ³µÁ¾µ±ÖĞ
+	             * ä¸»è¦æ€æƒ³ï¼šç”¨å¾ªç¯éå†åœ¨æ·»åŠ å®¢æˆ·ç§Ÿè½¦çš„åºå·ï¼Œç”¨é›†åˆæ¡†æ¶Listæ¥å­˜å‚¨å®¢æˆ·ç§Ÿçš„è½¦è¾†ã€‚
+	             * åŒæ—¶åœ¨å®¢æˆ·è¾“å…¥åºå·çš„æ—¶å€™ä¸ä¸‰ç§è½¦è¾†è¿›è¡Œæ¯”å¯¹ï¼Œè®¡ç®—ç›¸åº”è½¦è¾†çš„è½½äººæ•°ï¼Œè½½è´§é‡ä»¥åŠç§Ÿè½¦çš„æ€»èµ„é‡‘
+	             * åŒæ—¶æ·»åŠ åˆ°è½½äººè½¦è¾†æˆ–è€…è½½è´§è½¦è¾†å½“ä¸­
 	             */
-	            for(int i=0;i<totalNum;i++){
-	            	System.out.println("ÇëÊäÈëµÚ"+(i+1)+"Á¾³µµÄĞòºÅ");
-	            	int num=c.nextInt();
-	            	carList.add(carForRent[num-1]);
-	            	System.out.println("³É¹¦Ìí¼Ó£º"+carList.get(p).getName());
-	            	if(carForRent[num-1] instanceof Bus){
-	                    totalPassenger+=((Bus)carList.get(p)).getCarry();
-	                    totalMoney+=((Bus)carList.get(p)).getPayMoney();
-	                    carListBus.add(carList.get(p));
-	                }
-	                if(carForRent[num-1] instanceof Truck){
-	                    totalPassenger+=((Truck)carList.get(p)).getCarry();
-	                    totalCarrayCargo+=((Truck)carList.get(p)).getCargoCarry();
-	                    totalMoney+=((Truck)carList.get(p)).getPayMoney();
-	                    carListBus.add(carList.get(p));
-	                    carListTruck.add(carList.get(p));
-	                }
-	                if(carForRent[num-1] instanceof Van){
-	                    totalCarrayCargo+=((Van)carList.get(p)).getCargoCarry();
-	                    totalMoney+=((Van)carList.get(p)).getPayMoney();
-	                     carListTruck.add(carList.get(p));
-	                }
-	                p++;
-	            }
-	             
-	            System.out.println("ÇëÊäÈë×â³µµÄÌìÊı£º");
-	            int carRenDay=c.nextInt();
-	            totalMoney=totalMoney*carRenDay;
-	             
-	            System.out.println("********************¿ÉÔØÈËµÄ³µÓĞ********************");
-	            for (Car car1 : carListBus) {
-	                System.out.println(car1.getName());
-	            }
-	             
-	            System.out.println("********************¿ÉÔØ»õµÄ³µÓĞ********************");
-	            for (Car car1 : carListTruck) {
-	                System.out.println(car1.getName());
-	            }
-	             
-	            System.out.println("********************×â³µµÄ×Ü¼Û¸ñ********************");
-	            System.out.println(totalMoney*carRenDay);
-	             
-			 }
-		 }else if(k==2){
-			 flag=false;
-	          System.out.println("¸ĞĞ»ÄúµÄÔÙ´ÎÊ¹ÓÃ£¡ÔÙ¼û£¡");
-	             
-	        }
-		 else{
-			 
-			 System.out.println("ÄúÊäÈëµÄĞÅÏ¢ÓĞ´í£¡ÇëÖØĞÂÊäÈë");
-	     
-	            
-	   		 	
-	   		 	
-	            }
-			 
-			 
-		 
-	 }
-	 }
+					for(int i=0;i<totalNum;i++){
+						System.out.println("è¯·è¾“å…¥ç¬¬"+(i+1)+"è¾†è½¦çš„åºå·");
+						int num=c.nextInt();
+						carList.add(carForRent[num-1]);
+						System.out.println("æˆåŠŸæ·»åŠ ï¼š"+carList.get(p).getName());
+						if(carForRent[num-1] instanceof Bus){
+							totalPassenger+=((Bus)carList.get(p)).getCarry();
+							totalMoney+=((Bus)carList.get(p)).getPayMoney();
+							carListBus.add(carList.get(p));
+						}
+						if(carForRent[num-1] instanceof Truck){
+							totalPassenger+=((Truck)carList.get(p)).getCarry();
+							totalCarrayCargo+=((Truck)carList.get(p)).getCargoCarry();
+							totalMoney+=((Truck)carList.get(p)).getPayMoney();
+							carListBus.add(carList.get(p));
+							carListTruck.add(carList.get(p));
+						}
+						if(carForRent[num-1] instanceof Van){
+							totalCarrayCargo+=((Van)carList.get(p)).getCargoCarry();
+							totalMoney+=((Van)carList.get(p)).getPayMoney();
+							carListTruck.add(carList.get(p));
+						}
+						p++;
+					}
+
+					System.out.println("è¯·è¾“å…¥ç§Ÿè½¦çš„å¤©æ•°ï¼š");
+					int carRenDay=c.nextInt();
+					totalMoney=totalMoney*carRenDay;
+
+					System.out.println("********************å¯è½½äººçš„è½¦æœ‰********************");
+					for (Car car1 : carListBus) {
+						System.out.println(car1.getName());
+					}
+
+					System.out.println("********************å¯è½½è´§çš„è½¦æœ‰********************");
+					for (Car car1 : carListTruck) {
+						System.out.println(car1.getName());
+					}
+
+					System.out.println("********************ç§Ÿè½¦çš„æ€»ä»·æ ¼********************");
+					System.out.println(totalMoney*carRenDay);
+
+				}
+			}else if(k==2){
+				flag=false;
+				System.out.println("æ„Ÿè°¢æ‚¨çš„å†æ¬¡ä½¿ç”¨ï¼å†è§ï¼");
+
+			}
+			else{
+
+				System.out.println("æ‚¨è¾“å…¥çš„ä¿¡æ¯æœ‰é”™ï¼è¯·é‡æ–°è¾“å…¥");
+
+
+
+
+			}
+
+
+
+		}
+	}
 }
-
-

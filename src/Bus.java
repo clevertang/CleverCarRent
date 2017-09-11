@@ -1,5 +1,5 @@
 
-public class Bus extends Car {//¿Í³µ
+public class Bus extends Car {//
 		private int Carry;
 		public Bus(int Number,String name,int payMoney,int Carry){
 			 	this.setNumber(Number);

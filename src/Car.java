@@ -1,8 +1,7 @@
-
 public class Car {
-	private int Number;//定义序号
-	private String name;//定义车的型号
-	private int payMoney;//定义租金
+	private int Number;//瀹氫箟搴忓彿
+	private String name;//瀹氫箟杞︾殑鍨嬪彿
+	private int payMoney;//瀹氫箟绉熼噾
 	public int getNumber() {
 		return Number;
 	}
@@ -21,5 +20,5 @@ public class Car {
 	public void setPayMoney(int payMoney) {
 		this.payMoney = payMoney;
 	}
-	
+
 }

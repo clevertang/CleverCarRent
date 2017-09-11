@@ -1,5 +1,5 @@
 
-public class Truck extends Car {//Æ¤¿¨
+public class Truck extends Car {//
 	private int Carry;
 	private int cargoCarry;
 	public Truck(int Number,String name,int payMoney,int Carry,int cargoCarry ){

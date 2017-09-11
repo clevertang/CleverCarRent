@@ -1,5 +1,5 @@
 
-public class Van extends Car {//»õ³µ
+public class Van extends Car {//
 	private int cargoCarry;
 	public Van(int Number,String name,int payMoney,int cargoCarry ){
 		this.setNumber(Number);
